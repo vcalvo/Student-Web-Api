@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Data App</title>
+    <meta charset="utf-8" />
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/script.js"></script>
+    <link href="Content/bootstrap-reboot.css" rel="stylesheet" />
+</head>
+<body ng-app="myApp" class="container">
+    <div ng-controller="MainController">
+        <!--{{error}}--> 
+        <table class="table table-bordered table-striped">
+            <tr>
+                <td>Student Name</td>
+                <td>Language and Arts</td>
+                <td>Science</td>
+                <td>Social Studies</td>
+                <td>Maths</td>
+            </tr>
+            <tr ng-repeat="student in Students">
+                <td>{{student.sName}}</td>
+                <td>{{student.language_Arts}}</td>
+                <td>{{student.science}}</td>
+                <td>{{student.socialStudies}}</td>
+                <td>{{student.maths}}</td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>

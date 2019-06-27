@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="dbStudentsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'dbStudents.dbo.Students' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="sName" />
+            <PropertyRef Name="language_Arts" />
+            <PropertyRef Name="science" />
+            <PropertyRef Name="socialStudies" />
+            <PropertyRef Name="maths" />
+          </Key>
+          <Property Name="sName" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="language_Arts" Type="int" Nullable="false" />
+          <Property Name="science" Type="int" Nullable="false" />
+          <Property Name="socialStudies" Type="int" Nullable="false" />
+          <Property Name="maths" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="dbStudentsModelStoreContainer">
+          <EntitySet Name="Students" EntityType="Self.Students" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Students].[sName] AS [sName], 
+    [Students].[language_Arts] AS [language_Arts], 
+    [Students].[science] AS [science], 
+    [Students].[socialStudies] AS [socialStudies], 
+    [Students].[maths] AS [maths]
+    FROM [dbo].[Students] AS [Students]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="dbStudentsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Students">
+          <Key>
+            <PropertyRef Name="sName" />
+            <PropertyRef Name="language_Arts" />
+            <PropertyRef Name="science" />
+            <PropertyRef Name="socialStudies" />
+            <PropertyRef Name="maths" />
+          </Key>
+          <Property Name="sName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="language_Arts" Type="Int32" Nullable="false" />
+          <Property Name="science" Type="Int32" Nullable="false" />
+          <Property Name="socialStudies" Type="Int32" Nullable="false" />
+          <Property Name="maths" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="dbStudentsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Students" EntityType="Self.Students" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="dbStudentsModelStoreContainer" CdmEntityContainer="dbStudentsEntities">
+          <EntitySetMapping Name="Students">
+            <EntityTypeMapping TypeName="dbStudentsModel.Students">
+              <MappingFragment StoreEntitySet="Students">
+                <ScalarProperty Name="sName" ColumnName="sName" />
+                <ScalarProperty Name="language_Arts" ColumnName="language_Arts" />
+                <ScalarProperty Name="science" ColumnName="science" />
+                <ScalarProperty Name="socialStudies" ColumnName="socialStudies" />
+                <ScalarProperty Name="maths" ColumnName="maths" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

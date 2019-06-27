@@ -1,0 +1,10 @@
+c:\Users\vcalvo2\Documents\Visual Studio 2015\Projects\StudentDataApp\DataAccessLibrary\bin\Debug\DataAccessLibrary.dll.config
+c:\Users\vcalvo2\Documents\Visual Studio 2015\Projects\StudentDataApp\DataAccessLibrary\bin\Debug\DataAccessLibrary.dll
+c:\Users\vcalvo2\Documents\Visual Studio 2015\Projects\StudentDataApp\DataAccessLibrary\bin\Debug\DataAccessLibrary.pdb
+c:\Users\vcalvo2\Documents\Visual Studio 2015\Projects\StudentDataApp\DataAccessLibrary\bin\Debug\EntityFramework.dll
+c:\Users\vcalvo2\Documents\Visual Studio 2015\Projects\StudentDataApp\DataAccessLibrary\bin\Debug\EntityFramework.SqlServer.dll
+c:\Users\vcalvo2\Documents\Visual Studio 2015\Projects\StudentDataApp\DataAccessLibrary\bin\Debug\EntityFramework.xml
+c:\Users\vcalvo2\Documents\Visual Studio 2015\Projects\StudentDataApp\DataAccessLibrary\bin\Debug\EntityFramework.SqlServer.xml
+c:\Users\vcalvo2\Documents\Visual Studio 2015\Projects\StudentDataApp\DataAccessLibrary\obj\Debug\DataAccessLibrary.csprojResolveAssemblyReference.cache
+c:\Users\vcalvo2\Documents\Visual Studio 2015\Projects\StudentDataApp\DataAccessLibrary\obj\Debug\DataAccessLibrary.dll
+c:\Users\vcalvo2\Documents\Visual Studio 2015\Projects\StudentDataApp\DataAccessLibrary\obj\Debug\DataAccessLibrary.pdb

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbStudentsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="sName" />
+      <PropertyRef Name="language_Arts" />
+      <PropertyRef Name="science" />
+      <PropertyRef Name="socialStudies" />
+      <PropertyRef Name="maths" />
+    </Key>
+    <Property Name="sName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="language_Arts" Type="Int32" Nullable="false" />
+    <Property Name="science" Type="Int32" Nullable="false" />
+    <Property Name="socialStudies" Type="Int32" Nullable="false" />
+    <Property Name="maths" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="dbStudentsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Students" EntityType="Self.Students" />
+  </EntityContainer>
+</Schema>

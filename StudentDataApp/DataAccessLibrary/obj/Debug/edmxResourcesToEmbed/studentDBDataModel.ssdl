@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbStudentsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'dbStudents.dbo.Students' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="sName" />
+      <PropertyRef Name="language_Arts" />
+      <PropertyRef Name="science" />
+      <PropertyRef Name="socialStudies" />
+      <PropertyRef Name="maths" />
+    </Key>
+    <Property Name="sName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="language_Arts" Type="int" Nullable="false" />
+    <Property Name="science" Type="int" Nullable="false" />
+    <Property Name="socialStudies" Type="int" Nullable="false" />
+    <Property Name="maths" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="dbStudentsModelStoreContainer">
+    <EntitySet Name="Students" EntityType="Self.Students" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Students].[sName] AS [sName], 
+    [Students].[language_Arts] AS [language_Arts], 
+    [Students].[science] AS [science], 
+    [Students].[socialStudies] AS [socialStudies], 
+    [Students].[maths] AS [maths]
+    FROM [dbo].[Students] AS [Students]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
